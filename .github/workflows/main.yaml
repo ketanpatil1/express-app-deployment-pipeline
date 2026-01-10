@@ -27,4 +27,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/express-app:${{ github.sha }}
+          tags: |
+            ${{ vars.DOCKERHUB_USERNAME }}/express-app:${{ github.sha }}
+            ${{ vars.DOCKERHUB_USERNAME }}/express-app:latest
